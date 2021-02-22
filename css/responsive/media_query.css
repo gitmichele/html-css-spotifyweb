@@ -9,9 +9,61 @@
 @media all and (max-width: 551px) {
     #navbar nav{
         width: 50px;
+        padding: 0;
+        justify-content: flex-end;
     }
 
     #album-container{
         width: calc(100% - 50px);
     }
+
+    #navbar .playlist{
+        display: none;
+    }
+
+    .logo{
+        min-height: 50px;
+        line-height: 50px;
+    }
+
+    /* dimensioni immagini */
+    .logo a img{
+        width: 65%;
+        vertical-align: middle;
+    }
+    .nav_links a img{
+        width: 50%;
+        vertical-align: middle;
+    }
+
+    /* none su quello che non voglio vedere e block sul logo che voglio vedere*/
+    .logo a:first-of-type{
+        display: none;
+    }
+    .nav_links h5{
+        display: none;
+    }
+    .logo a:last-of-type{
+        display: block;
+        text-align: center;
+    }
+
+    /* centro icone dei links */
+    .nav_links a{
+        justify-content: center;
+    }
+
+    /* sistemo margini e colore di home (bordo sx non colorato) */
+    .nav_links a:first-of-type{
+        margin: 5px auto;
+        padding: 0;
+        border: none;
+        opacity: .5;
+    }
+
+    /* ancora .user in fondo alla navbar */
+    .user{
+        margin-top: auto;
+    }
+
 }
