@@ -1,3 +1,4 @@
+/* REGOLE GENERALI */
 *{
     margin: 0;
     padding: 0;
@@ -7,4 +8,67 @@
 body{
     font-family: 'Montserrat', sans-serif;
     font-size: 14px;
+    position: relative;
+}
+
+
+/* NAVBAR LATERALE */
+nav{
+    float: left;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: calc(100vh - 100px);
+    /* DEBUG:  */
+    background-color: lightgreen;
+}
+
+/* DEBUG:  */
+nav > div {
+    border: 1px solid black;
+}
+
+.logo{
+    min-height: 100px;
+}
+
+.nav_links{
+    min-height: 200px;
+}
+
+.playlist{
+    min-height: 200px;
+    flex-grow: 99;
+    overflow-y: auto;
+}
+
+.user{
+    min-height: 100px;
+}
+
+
+/* MAIN */
+/* DEBUG:  */
+.main_container{
+    float: left;
+    width: calc(100% - 300px);
+    min-height: calc(100vh - 100px);
+    background-color: lightblue;
+}
+
+/* DEBUG:  */
+#upgrade{
+    height: 100px;
+    background-color: #ffffff50;
+}
+
+
+/* PLAYER */
+/* DEBUG:  */
+#player{
+    position: absolute;
+    top: calc(100vh - 100px);
+    background-color: gray;
+    height: 100px;
+    width: 100vw;
 }
