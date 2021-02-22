@@ -8,13 +8,18 @@
 body{
     font-family: 'Montserrat', sans-serif;
     font-size: 14px;
-    position: relative;
 }
 
 
+
+/* MAIN */
+/* DEBUG:  */
+.main_container{
+    display: flex;
+}
+
 /* NAVBAR LATERALE */
-nav{
-    float: left;
+#navbar nav{
     display: flex;
     flex-direction: column;
     width: 300px;
@@ -46,18 +51,16 @@ nav > div {
     min-height: 100px;
 }
 
-
-/* MAIN */
-/* DEBUG:  */
-.main_container{
-    float: left;
-    width: calc(100% - 300px);
-    min-height: calc(100vh - 100px);
+/* ALBUM CONTAINER */
+#album-container{
     background-color: lightblue;
+    width: calc(100% - 300px);
+    height: calc(100vh - 100px);
 }
 
+
 /* DEBUG:  */
-#upgrade{
+.upgrade{
     height: 100px;
     background-color: #ffffff90;
 }
@@ -66,9 +69,6 @@ nav > div {
 /* PLAYER */
 /* DEBUG:  */
 #player{
-    position: absolute;
-    top: calc(100vh - 100px);
     background-color: gray;
     height: 100px;
-    width: 100vw;
 }

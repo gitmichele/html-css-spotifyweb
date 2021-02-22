@@ -5,13 +5,13 @@
 (max-width: 638px) and (min-width: 552px)
 (max-width: 551px) */
 
-
+/* NAVBAR RESIZE */
 @media all and (max-width: 551px) {
-    nav{
+    #navbar nav{
         width: 50px;
     }
 
-    .main_container{
+    #album-container{
         width: calc(100% - 50px);
     }
 }
