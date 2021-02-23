@@ -5,14 +5,80 @@
 (max-width: 638px) and (min-width: 552px)
 (max-width: 551px) */
 
-
+/* NAVBAR LATERALE */
 @media all and (max-width: 551px) {
+    /* MACRO */
+    /* ridimensiono larghezza navabr e metto flex end per consentire a .albums_container di stare sempre in fondo*/
     #navbar{
         width: 50px;
+        padding: 0 8px;
+        justify-content: flex-end;
+        min-height: 220px;
     }
-
+    /* tolgo padding generale di 20px a sx */
+    #navbar > div{
+        margin-top: 8px;
+    }
+    /* ridimensiono larghezza albums */
     #albums{
         width: calc(100% - 50px);
     }
 
+    /* LOGO */
+    /* faccio apparire logo piccolo per xs */
+    #navbar .logo a:last-of-type{
+        display: block;
+    }
+    /* faccio scomparire logo grande per xs */
+    #navbar .logo a:first-of-type{
+        display: none;
+    }
+
+    /* NAV LINKS */
+    /* tolgo scritte ai nav_links */
+    #navbar .nav_links ul li h6{
+        display: none;
+    }
+    /* centro immagini */
+    #navbar .nav_links ul li{
+        text-align: center;
+    }
+    /* ridimesiono immagini e sistemo opacity uguale per tutti*/
+    #navbar .nav_links img{
+        width: 70%;
+        opacity: .6;
+        vertical-align: middle;
+    }
+
+    /* ADD PLAYLIST - PLAYLIST ALBUM */
+    /* scompaiono per xs */
+    #navbar .add_playlist,
+    #navbar .playlist_albums{
+        display: none;
+    }
+
+    /* USER */
+    /* setto margine superiore per ancorarlo al fondo */
+    #navbar .user{
+        margin-top: auto;
+        text-align: center;
+    }
+    /* scritte scompaiono per xs */
+    #navbar .user div:first-of-type p,
+    #navbar .user div:last-of-type h5{
+        display: none;
+    }
+    /* ridimensiono immagine scarica */
+    #navbar .user div:first-of-type img{
+        width: 35%;
+        margin-right: 0;
+    }
+    /* centro user img */
+    #navbar .user div:last-of-type figure{
+        margin: 0;
+    }
+    /* tolgo bordo inferiore */
+    #navbar .user div:first-of-type{
+        border-bottom: none;
+    }
 }

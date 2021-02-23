@@ -18,39 +18,143 @@ body{
     overflow-y: hidden;
 }
 
+/* regole generali di testo */
+a{
+    text-decoration: none;
+    color: #fff;
+}
+h5{
+    font-size: 1em;
+    font-weight: 900;
+}
+h6{
+    font-size: .9em;
+    display: inline-block;
+}
+ul{
+    list-style: none;
+}
+.text_opacity{
+    opacity: .6;
+}
+
 
 /* NAVBAR LATERAL */
+/* REGOLE NAVBAR */
 #navbar{
-    width: 280px;
+    width: 250px;
     display: flex;
     flex-direction: column;
+    background-color: #000;
+    padding: 0 20px;
 }
-
-/* DEBUG:  */
 #navbar > div{
-    border: 1px solid black;
-    color: #000;
+    margin-top: 20px;
 }
-
-/* tutt i div della nav tranne playlist albums si adattano al contenuto, non si
+/* tutti i div della nav tranne playlist albums si adattano al contenuto, non si
 rimpiccioliscono e non si ingrandiscono */
 #navbar > div:not(.playlist_albums){
     flex: 0 0 auto;
 }
-
 /* playlist albums si prende tutto lo spazio che resta libero
 di rimpoccilirsi quando cambia il vh fino a 100px e che compaia lo scroll */
 #navbar .playlist_albums{
     flex: 99 1 auto;
     min-height: 100px;
     overflow-y: auto;
+}
+
+/* LOGO */
+/* dimesiono logo normale */
+#navbar .logo a:first-of-type img{
+    width: 55%;
+}
+/* faccio scomparire logo piccolo per xs */
+#navbar .logo a:last-of-type{
+    display: none;
+}
+
+/* NAV LINKS */
+/* dimensiono immagini */
+#navbar .nav_links img{
+    width: 12%;
+    vertical-align: middle;
+}
+/* spazio tra i link */
+#navbar .nav_links li{
+    padding: 3px 0;
+}
+/* bordo colorato link selezionato */
+#navbar .nav_links ul li:first-of-type{
+    margin-left: -20px;
+    padding-left: 17px; /* padding = margin - 3px di bordo sinistro*/
+    border-left: 3px solid lime;
+}
+
+/* ADD PLAYLIST */
+/* icona add */
+#navbar .add_playlist i{
+    padding: 8px 10px;
+    margin: 8px 5px 0 0;
+    background-color: #fff;
     color: #000;
 }
+/* dimesioni testo */
+#navbar .add_playlist h6{
+    font-size: 1em;
+}
+
+/* PLAYLIST ALBUMS */
+/* dimesioni testo e spaziatura */
+#navbar .playlist_albums ul li{
+    font-size: .9em;
+    margin-bottom: 15px;
+}
+
+/* USER */
+#navbar .user > div{
+    margin-bottom: 10px;
+}
+/* installa app */
+/* dimesiono immagine*/
+#navbar .user div:first-of-type img{
+    width: 7%;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+/* bordo e font installa */
+#navbar .user div:first-of-type p{
+    font-size: .85em;
+    display: inline-block;
+}
+#navbar .user div:first-of-type{
+    padding-bottom: 10px;
+    border-bottom: 2px solid #ffffff60;
+}
+
+/* utente */
+/* dimensiono immagine */
+#navbar .user figure{
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    background-color: #ffffff60;
+    vertical-align: middle;
+    display: inline-block;
+    overflow: hidden;
+    margin-right: 8px;
+}
+/* testo */
+#navbar .user div:last-of-type h5{
+    display: inline-block;
+}
+
+
 
 
 /* ALBUMS */
 #albums{
-    width: calc(100% - 280px);
+    width: calc(100% - 250px);
     background-color: lightgreen;
 }
 
