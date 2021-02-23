@@ -1,12 +1,20 @@
 /* breack points */
-/* (min-width: 1440px)
-(max-width: 1399px) and (min-width: 878px)
-(max-width: 877px) and (min-width: 639px)
-(max-width: 638px) and (min-width: 552px)
-(max-width: 551px) */
+/*
+(min-width: 992px)
+(min-width: 768px) and (max-width: 991px)
+(min-width: 576px) and (max-width: 767px)
+(max-width: 575px)
+ */
+
+/* @media all and (min-width: 1200px) {
+    body{
+        max-width: 1140px;
+        margin: auto;
+    }
+} */
 
 /* NAVBAR LATERALE */
-@media all and (max-width: 551px) {
+@media all and (max-width: 575px) {
     /* MACRO */
     /* ridimensiono larghezza navabr e metto flex end per consentire a .albums_container di stare sempre in fondo*/
     #navbar{
@@ -20,7 +28,7 @@
         margin-top: 8px;
     }
     /* ridimensiono larghezza albums */
-    #albums{
+    #albums_container{
         width: calc(100% - 50px);
     }
 
