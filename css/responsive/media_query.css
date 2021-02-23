@@ -58,7 +58,7 @@
     }
 
     /* USER */
-    /* setto margine superiore per ancorarlo al fondo */
+    /* margine superiore per ancorarlo al fondo */
     #navbar .user{
         margin-top: auto;
         text-align: center;
@@ -68,12 +68,12 @@
     #navbar .user div:last-of-type h5{
         display: none;
     }
-    /* ridimensiono immagine scarica */
+    /* ridimensiono immagine installa app */
     #navbar .user div:first-of-type img{
         width: 35%;
         margin-right: 0;
     }
-    /* centro user img */
+    /* centro immmagine utente */
     #navbar .user div:last-of-type figure{
         margin: 0;
     }

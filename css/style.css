@@ -4,14 +4,12 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 body{
     font-family: 'Montserrat', sans-serif;
     font-size: 14px;
     font-weight: 700;
     color: #fff;
 }
-
 .main_container{
     display: flex;
     height: calc(100vh - 100px);
@@ -39,7 +37,7 @@ ul{
 }
 
 
-/* NAVBAR LATERAL */
+/* NAVBAR LATERALE */
 /* REGOLE NAVBAR */
 #navbar{
     width: 250px;
@@ -56,8 +54,8 @@ rimpiccioliscono e non si ingrandiscono */
 #navbar > div:not(.playlist_albums){
     flex: 0 0 auto;
 }
-/* playlist albums si prende tutto lo spazio che resta libero
-di rimpoccilirsi quando cambia il vh fino a 100px e che compaia lo scroll */
+/* playlist albums si prende tutto lo spazio che resta - è libero
+di rimpoccilirsi quando cambia il vh fino a 100px e compare lo scroll */
 #navbar .playlist_albums{
     flex: 99 1 auto;
     min-height: 100px;
