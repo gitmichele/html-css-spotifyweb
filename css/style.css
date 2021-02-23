@@ -12,142 +12,49 @@ body{
     color: #fff;
 }
 
-/* regole genrali testo */
-.text_overlay{
-    opacity: .5;
-}
-
-a{
-    text-decoration: none;
-    color: #fff;
-}
-
-h5{
-    display: inline-block;
-    font-size: 1em;
-    padding-left: 8px;
-}
-
-h4{
-    font-size: 1em;
-    font-weight: 900;
-}
-
-
-/* MAIN */
 .main_container{
     display: flex;
+    height: calc(100vh - 100px);
+    overflow-y: hidden;
 }
 
-/* NAVBAR LATERALE */
-#navbar nav{
+
+/* NAVBAR LATERAL */
+#navbar{
+    width: 280px;
     display: flex;
     flex-direction: column;
-    width: 300px;
-    height: calc(100vh - 100px);
-    background-color: #000;
-    padding: 0 20px;
 }
-
-/* LOGO */
-/* setto altezza di base per il logo */
-.logo{
-    min-height: 100px;
-    line-height: 100px;
-}
-
-/* ridimensiono img */
-.logo a:first-of-type img{
-    width: 65%;
-    vertical-align: middle;
-}
-
-/* logo piccolo per xs */
-.logo a:last-of-type{
-    display: none;
-}
-
-/* NAV LINKS */
-/* ridimensiono img */
-.nav_links img{
-    width: 12%;
-}
-
-/* posiziono link */
-.nav_links a{
-    vertical-align: middle;
-    display: flex;
-    align-items: center;
-    margin: 5px auto;
-}
-
-/* bordo sx colorato per home */
-.nav_links a:first-of-type{
-    margin-left: -20px;
-    padding-left: 17px;
-    border-left: 3px solid lime;
-}
-
-/* ADD PLAYLIST */
-.add_playlist{
-    text-align: left;
-}
-.add_playlist h4{
-    margin: 12px 0;
-}
-.add_playlist i{
-    padding: 7px 10px;
-    background-color: #ffffff;
-    color: #000;
-    font-size: 1.5em;
-    margin-right: 8px;
-}
-
-
-/* PLAYLIST */
-.playlist{
-    min-height: 200px;
-    flex-grow: 99;
-    overflow-y: auto;
-}
-
-.playlist ul li{
-    margin: 18px auto;
-    font-size: .9em;
-}
-
-
-
-.user{
-    align-self: flex-end;
-    border: 1px solid white;
-    min-height: 100px;
-    width: 100%;
-}
-
-
-
-
-/* ALBUM CONTAINER */
-#album-container{
-    background-color: lightblue;
-    width: calc(100% - 300px);
-    height: calc(100vh - 100px);
-}
-
 
 /* DEBUG:  */
-.upgrade{
+#navbar > div{
+    border: 1px solid black;
+    color: #000;
+}
+
+/* tutt i div della nav tranne playlist albums si adattano al contenuto, non si
+rimpiccioliscono e non si ingrandiscono */
+#navbar > div:not(.playlist_albums){
+    flex: 0 0 auto;
+}
+
+/* playlist albums si prende tutto lo spazio che resta libero
+di rimpoccilirsi quando cambia il vh fino a 100px e che compaia lo scroll */
+#navbar .playlist_albums{
+    flex: 99 1 auto;
+    min-height: 100px;
+    overflow-y: auto;
+    color: #000;
+}
+
+
+/* ALBUMS */
+#albums{
+    width: calc(100% - 280px);
+    background-color: lightgreen;
+}
+
+#albums .upgrade{
     height: 100px;
     background-color: #ffffff90;
-}
-
-
-/* PLAYER */
-/* DEBUG:  */
-#player{
-    position: sticky;
-    background-color: gray;
-    height: 100px;
-    z-index: 999;
 }
