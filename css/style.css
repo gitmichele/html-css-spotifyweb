@@ -219,13 +219,6 @@ di rimpoccilirsi quando cambia il vh fino a 100px e compare lo scroll */
 
 /* SEZIONI ALBUMS */
 /* RECENTLY PLAYED */
-/* clearfix */
-.slideshow_container::after{
-    content: "";
-    display: table;
-    clear: both;
-}
-/* quando gli ultimi due blocchi vanno a capo in MD, mettendo lo slideshow_container in flex ogni elemento prende la stessa altezza e il blocco va a posizionarsi a sx. Se tolgo flex, il titolo troppo lungo di stranger things ingombra lo spazio e il blocco a capo resta "bloccato" a dx */
 .slideshow_container{
     display: flex;
     flex-wrap: wrap;
@@ -233,11 +226,9 @@ di rimpoccilirsi quando cambia il vh fino a 100px e compare lo scroll */
 }
 /* ingombro colonne */
 .slideshow_container .album_container{
-    float: left;
     width: calc((100% - (15px *6)) / 6);
-    margin-right: 15px;
+    margin: 0 15px 15px 0;
     text-align: center;
-    margin-bottom: 15px;
 }
 .slideshow_container .album_container h5{
     margin: 12px 0 6px 0;
