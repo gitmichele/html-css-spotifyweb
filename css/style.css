@@ -210,49 +210,20 @@ di rimpoccilirsi quando cambia il vh fino a 100px e compare lo scroll */
 
 /* SEZIONI ALBUMS */
 /* RECENTLY PLAYED */
-.recently_played .slideshow_container{
-    display: flex;
-    justify-content: flex-start;
-    flex-wrap: wrap;
+/* clearfix */
+.recently_played .slideshow_container::after{
+    content: "";
+    display: table;
+    clear: both;
 }
-
-/* hover overlay per le cover */
-/* ingombro */
-.recently_played .cover_container{
-    flex: 1 0 200px;
+/* ingombro colonne */
+.recently_played .column{
+    float: left;
+    width: calc((100% - 30px) / 3); /*15px+15px di margine alla colonna centrale*/
+    border: 1px solid white;
+    height: 200px;
 }
-.recently_played .cover_container .cover{
-    position: relative;
-    margin-right: 15px;
-}
-/* comportamento immagini cover */
-.recently_played .cover_container img {
-  display: block;
-  width: 100%;
-  transition: all .2s ease;
-}
-/* posizione e comportamento icona play */
-.recently_played .cover_container .play {
-  transition: all .2s ease;
-  opacity: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: calc(3em + 1.5vw);
-}
-/* hover */
-.recently_played .cover_container:hover img {
-  opacity: 0.5;
-}
-.recently_played .cover_container:hover .play {
-  opacity: 1;
-}
-/* album text */
-.recently_played .album-text{
-    text-align: center;
-}
-
-.recently_played .album-text h5{
-    margin: 20px 0 8px 0;
+/* margine dx sx colonna centrale*/
+.recently_played .slideshow_container > div:nth-child(2n+2){
+    margin: 0 15px;
 }

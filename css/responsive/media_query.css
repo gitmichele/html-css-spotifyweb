@@ -1,17 +1,46 @@
 /* breack points */
 /*
-(min-width: 992px)
-(min-width: 768px) and (max-width: 991px)
-(min-width: 576px) and (max-width: 767px)
-(max-width: 575px)
+MD (min-width: 640px) and (max-width: 878px)
+SM (min-width: 553px) and (max-width: 639px)
+XS (max-width: 552px)
  */
 
-/* @media all and (min-width: 1200px) {
-    body{
-        max-width: 1140px;
-        margin: auto;
+/* ALBUM SLIDESHOW */
+@media all and (min-width: 640px) and (max-width: 878px){
+    /* ridimesiono contenitori album */
+    .recently_played .column{
+        width: calc((100% - 15px) / 2); /*15px di margine alla prima colonna*/
     }
-} */
+    /* cambio i margini */
+    .recently_played .slideshow_container > div:nth-child(2n+2){
+        margin: 0;
+    }
+    .recently_played .slideshow_container > div:first-of-type{
+        margin-right: 15px;
+    }
+}
+
+@media all and (min-width: 553px) and (max-width: 639px){
+    /* ridimesiono contenitori album */
+    .recently_played .column{
+        width: 100%;
+    }
+    /* cambio i margini */
+    .recently_played .slideshow_container > div:nth-child(2n+2){
+        margin: 0;
+    }
+}
+
+@media all and (max-width: 552px){
+    /* ridimesiono contenitori album */
+    .recently_played .column{
+        width: 100%;
+    }
+    /* cambio i margini */
+    .recently_played .slideshow_container > div:nth-child(2n+2){
+        margin: 0;
+    }
+}
 
 /* NAVBAR LATERALE */
 @media all and (max-width: 575px) {
