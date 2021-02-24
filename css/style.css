@@ -216,6 +216,11 @@ di rimpoccilirsi quando cambia il vh fino a 100px e compare lo scroll */
     display: table;
     clear: both;
 }
+/* quando l'ultimo bloccho va a capo in MD, mettendo lo slideshow_container in flex ogni elemento prende la stessa altezza e il blocco va a posizionarsi a sx. Se tolgo flex, il titolo troppo lungo di stranger things ingombra lo spazio e il blocco a apo resta "bloccato" a dx */
+.recently_played .slideshow_container{
+    display: flex;
+    flex-wrap: wrap;
+}
 /* ingombro colonne */
 .recently_played .column{
     display: flex;
@@ -236,6 +241,10 @@ di rimpoccilirsi quando cambia il vh fino a 100px e compare lo scroll */
 /* margine a dx al primo album della colonna */
 .recently_played .column .album_container:first-of-type{
     margin-right: 15px;
+}
+/* margini titolo album */
+.recently_played .album_container h5{
+    margin: 12px 0 6px 0;
 }
 /* ridimesiono immagine */
 .recently_played .album_container .image_container img{
