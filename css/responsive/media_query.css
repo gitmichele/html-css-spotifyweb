@@ -7,38 +7,20 @@ XS (max-width: 552px)
 
 /* ALBUM SLIDESHOW */
 @media all and (min-width: 640px) and (max-width: 878px){
-    /* ridimesiono contenitori album */
-    .recently_played .column{
-        width: calc((100% - 15px) / 2); /*15px di margine alla prima colonna*/
-    }
-    /* cambio i margini */
-    .recently_played .slideshow_container > div:nth-child(2n+2){
-        margin: 0 0 0 15px;
-    }
-    .recently_played .slideshow_container > div:last-of-type{
-        margin-top: 15px;
+    .recently_played .album_container{
+        width: calc((100% - (15px *4)) / 4);
     }
 }
 
 @media all and (min-width: 553px) and (max-width: 639px){
-    /* ridimesiono contenitori album */
-    .recently_played .column{
-        width: 100%;
-    }
-    /* cambio i margini */
-    .recently_played .slideshow_container > div:nth-child(2n+2){
-        margin: 15px 0;
+    .recently_played .album_container{
+        width: calc((100% - (15px *2)) / 2);
     }
 }
 
 @media all and (max-width: 552px){
-    /* ridimesiono contenitori album */
-    .recently_played .column{
-        width: 100%;
-    }
-    /* cambio i margini */
-    .recently_played .slideshow_container > div:nth-child(2n+2){
-        margin: 15px 0;
+    .recently_played .album_container{
+        width: calc((100% - (15px *2)) / 2);
     }
 }
 
