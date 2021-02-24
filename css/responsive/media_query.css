@@ -101,3 +101,11 @@ XS (max-width: 552px)
         border-bottom: none;
     }
 }
+
+
+@media all and (max-width: 878px){
+    .song .song_icons{
+        flex-direction: column;
+        justify-content: center;
+    }
+}

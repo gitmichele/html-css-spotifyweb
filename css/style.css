@@ -9,6 +9,8 @@ body{
     font-size: 14px;
     font-weight: 700;
     color: #fff;
+    height: 100vh;
+    width: 100%;
 }
 .main_container{
     display: flex;
@@ -274,10 +276,72 @@ di rimpoccilirsi quando cambia il vh fino a 100px e compare lo scroll */
 
 
 /* PLAYER */
+/* regole footer */
 #player{
-    height: 100px;
-    margin: 0 15px;
     display: flex;
     justify-content: space-between;
+    height: 100px;
     background-color: #282828;
+    padding: 0 15px;
+}
+
+#player .song{
+    display: flex;
+    flex: 1 0 130px;
+}
+
+.song .song_up{
+    display: flex;
+    flex: 0 0 80%;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.song .song_icons{
+    display: flex;
+    justify-content: space-around;
+    flex: 0 0 20%;
+    align-items: center;
+}
+
+.song .song_up img{
+    max-height: 50%;
+    max-width: 100%;
+    margin-right: 10px;
+}
+
+
+
+#player .time{
+    display: flex;
+    flex: 1 1 80%;
+    flex-direction: column;
+    border: 1px solid black;
+    height: 100%;
+}
+
+.time .buttons,
+.time .time_bar{
+    width: 75%;
+    margin: auto;
+    height: 50%;
+    border: 1px solid white;
+}
+.time .buttons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.time .buttons .fa-play-circle{
+    font-size: 1.8em;
+}
+.time .buttons li{
+    margin: 0 10px;
+}
+
+
+
+#player .volume{
+    border: 1px solid black;
+    height: 100%;
 }
