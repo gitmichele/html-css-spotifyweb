@@ -102,7 +102,7 @@ XS (max-width: 552px)
     }
 }
 
-
+/* PLAYER */
 @media all and (max-width: 878px){
     .song .song_icons{
         flex-direction: column;

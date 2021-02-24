@@ -284,19 +284,26 @@ di rimpoccilirsi quando cambia il vh fino a 100px e compare lo scroll */
     background-color: #282828;
     padding: 0 15px;
 }
-
+/* SONG */
+/* larghezza minima */
 #player .song{
     display: flex;
     flex: 1 0 130px;
 }
-
+/* parte con img e nome canzone */
 .song .song_up{
     display: flex;
     flex: 0 0 80%;
     justify-content: flex-start;
     align-items: center;
 }
-
+/* dimesioni img */
+.song .song_up img{
+    max-height: 50%;
+    max-width: 100%;
+    margin-right: 10px;
+}
+/* parte con icone */
 .song .song_icons{
     display: flex;
     justify-content: space-around;
@@ -304,41 +311,47 @@ di rimpoccilirsi quando cambia il vh fino a 100px e compare lo scroll */
     align-items: center;
 }
 
-.song .song_up img{
-    max-height: 50%;
-    max-width: 100%;
-    margin-right: 10px;
-}
-
-
-
+/* TIME */
 #player .time{
     display: flex;
     flex: 1 1 80%;
     flex-direction: column;
+    justify-content: center;
     border: 1px solid black;
     height: 100%;
+    padding: 10px 0;
 }
-
-.time .buttons,
-.time .time_bar{
-    width: 75%;
-    margin: auto;
-    height: 50%;
-    border: 1px solid white;
-}
+/* ingombro bottoni */
 .time .buttons{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    min-width: 40%;
+    margin: auto;
+    text-align: center;
+}
+.time li{
+    display: inline-block;
+    margin: 0 10px;
+    vertical-align: middle;
 }
 .time .buttons .fa-play-circle{
     font-size: 1.8em;
 }
-.time .buttons li{
-    margin: 0 10px;
+/* ingombro blocco barra tempo */
+.time .time_bar_container{
+    display: flex;
+    min-width: 50%;
+    margin: auto;
+    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+    font-size: .7em;
 }
-
+/* ingombro barra tempo effettiva */
+.time .time_bar{
+    width: 90%;
+    margin: 0 2px;
+    border: 1px solid white;
+    opacity: .4;
+}
 
 
 #player .volume{
