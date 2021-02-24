@@ -314,10 +314,9 @@ di rimpoccilirsi quando cambia il vh fino a 100px e compare lo scroll */
 /* TIME */
 #player .time{
     display: flex;
-    flex: 1 1 80%;
+    flex: 1 1 65%;
     flex-direction: column;
     justify-content: center;
-    border: 1px solid black;
     height: 100%;
     padding: 10px 0;
 }
@@ -338,7 +337,7 @@ di rimpoccilirsi quando cambia il vh fino a 100px e compare lo scroll */
 /* ingombro blocco barra tempo */
 .time .time_bar_container{
     display: flex;
-    min-width: 50%;
+    min-width: 60%;
     margin: auto;
     text-align: center;
     justify-content: space-between;
@@ -349,12 +348,29 @@ di rimpoccilirsi quando cambia il vh fino a 100px e compare lo scroll */
 .time .time_bar{
     width: 90%;
     margin: 0 2px;
-    border: 1px solid white;
     opacity: .4;
 }
 
-
+/* VOLUME */
 #player .volume{
-    border: 1px solid black;
-    height: 100%;
+    flex: 1 0 130px;
+    display: flex;
+    align-items: center;
+}
+/* ingombro lista */
+.volume ul{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+/* elementi lista */
+.volume li{
+    display: inline-block;
+    margin: 0 5px;
+    font-size: .8em;
+    opacity: .9;
+}
+/* barra volume */
+.volume li:last-of-type{
+    width: 100%;
 }
