@@ -13,10 +13,10 @@ XS (max-width: 552px)
     }
     /* cambio i margini */
     .recently_played .slideshow_container > div:nth-child(2n+2){
-        margin: 0;
+        margin: 0 0 0 15px;
     }
-    .recently_played .slideshow_container > div:first-of-type{
-        margin-right: 15px;
+    .recently_played .slideshow_container > div:last-of-type{
+        margin-top: 15px;
     }
 }
 
@@ -27,7 +27,7 @@ XS (max-width: 552px)
     }
     /* cambio i margini */
     .recently_played .slideshow_container > div:nth-child(2n+2){
-        margin: 0;
+        margin: 15px 0;
     }
 }
 
@@ -38,7 +38,7 @@ XS (max-width: 552px)
     }
     /* cambio i margini */
     .recently_played .slideshow_container > div:nth-child(2n+2){
-        margin: 0;
+        margin: 15px 0;
     }
 }
 

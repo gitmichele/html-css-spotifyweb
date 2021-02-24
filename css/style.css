@@ -218,12 +218,48 @@ di rimpoccilirsi quando cambia il vh fino a 100px e compare lo scroll */
 }
 /* ingombro colonne */
 .recently_played .column{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
     float: left;
     width: calc((100% - 30px) / 3); /*15px+15px di margine alla colonna centrale*/
-    border: 1px solid white;
-    height: 200px;
 }
-/* margine dx sx colonna centrale*/
+/* margine laterale colonna centrale*/
 .recently_played .slideshow_container > div:nth-child(2n+2){
     margin: 0 15px;
+}
+/* larghezza singolo album */
+.recently_played .column .album_container{
+    width: calc(100% - 7.5px);
+    text-align: center;
+}
+/* margine a dx al primo album della colonna */
+.recently_played .column .album_container:first-of-type{
+    margin-right: 15px;
+}
+/* ridimesiono immagine */
+.recently_played .album_container .image_container img{
+    width: 100%;
+    transition: all .2s ease;
+}
+/* opacità immagine sull'hover */
+.recently_played .album_container .image_container:hover img{
+    opacity: .5;
+}
+/* play button */
+.recently_played .album_container .image_container{
+    position: relative;
+}
+.recently_played .play{
+    position: absolute;
+    font-size: calc(4em + 1.5vw);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: all .2s ease;
+}
+/* visibile sull'hover */
+.recently_played .album_container .image_container:hover .play{
+    opacity: 1;
 }
