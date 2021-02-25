@@ -1,0 +1,455 @@
+/* REGOLE GENERALI */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+    height: 100vh;
+    width: 100%;
+}
+.main_container{
+    display: flex;
+    height: calc(100vh - 85px);
+    overflow-y: hidden;
+}
+
+/* regole generali di testo */
+a{
+    text-decoration: none;
+    color: #fff;
+}
+a:hover {
+    opacity:1;
+}
+h2{
+    font-size: 2em;
+}
+h5{
+    font-size: 1em;
+    font-weight: 900;
+}
+h6{
+    font-size: .9em;
+    display: inline-block;
+}
+.create_for h6,
+.popular h6{
+    margin-top: 10px;
+}
+ul{
+    list-style: none;
+}
+.text_opacity{
+    opacity: .6;
+}
+
+
+/* NAVBAR LATERALE */
+/* REGOLE NAVBAR */
+#navbar{
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    background-color: #000;
+    padding: 0 20px;
+}
+#navbar > div{
+    margin-top: 20px;
+}
+/* tutti i div della nav tranne playlist albums si adattano al contenuto, non si
+rimpiccioliscono e non si ingrandiscono */
+#navbar > div:not(.playlist_albums){
+    flex: 0 0 auto;
+}
+/* playlist albums si prende tutto lo spazio che resta - è libero
+di rimpoccilirsi quando cambia il vh fino a 100px e compare lo scroll */
+#navbar .playlist_albums{
+    flex: 1 1 auto;
+    min-height: 100px;
+    overflow-y: auto;
+}
+
+/* LOGO */
+/* dimesiono logo normale */
+#navbar .logo a:first-of-type img{
+    width: 55%;
+}
+/* faccio scomparire logo piccolo per xs */
+#navbar .logo a:last-of-type{
+    display: none;
+}
+
+/* NAV LINKS */
+/* dimensiono immagini */
+#navbar .nav_links img{
+    width: 12%;
+    vertical-align: middle;
+}
+/* spazio tra i link */
+#navbar .nav_links li{
+    padding: 3px 0;
+}
+/* bordo colorato link selezionato */
+#navbar .nav_links ul li:first-of-type{
+    margin-left: -20px;
+    padding-left: 17px; /* padding = margin - 3px di bordo sinistro*/
+    border-left: 3px solid lime;
+}
+
+/* ADD PLAYLIST */
+/* icona add */
+#navbar .add_playlist i{
+    padding: 8px 10px;
+    margin: 8px 5px 0 0;
+    background-color: #fff;
+    color: #000;
+}
+/* dimesioni testo */
+#navbar .add_playlist h6{
+    font-size: 1em;
+}
+
+/* PLAYLIST ALBUMS */
+/* dimesioni testo e spaziatura */
+#navbar .playlist_albums ul li{
+    font-size: .9em;
+    margin-bottom: 15px;
+}
+
+/* USER */
+#navbar .user > div{
+    margin-bottom: 10px;
+}
+/* installa app */
+/* dimesiono immagine*/
+#navbar .user div:first-of-type img{
+    width: 7%;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+/* bordo e font installa */
+#navbar .user div:first-of-type p{
+    font-size: .85em;
+    display: inline-block;
+}
+#navbar .user div:first-of-type{
+    padding-bottom: 10px;
+    border-bottom: 2px solid #ffffff60;
+}
+
+/* utente */
+/* dimensiono immagine */
+#navbar .user figure{
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    background-color: #ffffff60;
+    vertical-align: middle;
+    display: inline-block;
+    overflow: hidden;
+    margin-right: 8px;
+}
+/* testo */
+#navbar .user div:last-of-type h5{
+    display: inline-block;
+}
+
+
+
+
+/* ALBUMS */
+/* regole genrali */
+#albums_container{
+    width: calc(100% - 250px);
+    overflow: auto;
+    background-color: rgb(20,25,34);
+}
+#albums_container .albums > div{
+    padding: 20px 30px;
+}
+
+/* UPGRADE BAR */
+#albums_container .upgrade{
+    height: 100px;
+    background-color: #00000080;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    font-size: calc(.7em + .3vw);
+}
+/* pulsante upgrade */
+#albums_container .upgrade a{
+    padding: 10px 40px;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    margin-right: 5px;
+    transition: all .2s ease;
+}
+#albums_container .upgrade a:hover{
+    transform: scale(1.1);
+    margin-right: 30px;
+}
+
+/* ALBUMS PARTE PRINCIPALE */
+/* NAVBAR */
+#albums_container .albums ul{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: space-between;
+    text-align: center;
+}
+#albums_container .albums nav li{
+    display: inline-block;
+    padding: 20px 8px;
+    font-size: .8em;
+}
+/* applico opacity diversa da .text_opacity e solo agli elementi di li così da non opacizzare anche il bordo */
+#albums_container .albums nav li > *{
+    opacity: .4;
+}
+#albums_container .albums nav li > *:hover{
+    opacity: 1;
+}
+/* bordo più corto per il primo elemento li */
+#albums_container .albums nav li:first-of-type:after {
+    content: "";
+    display: block;
+    margin: 0 auto;
+    width: 35%;
+    padding-bottom: 3px;
+    border-bottom: 2px solid lime;
+}
+
+/* SEIONI ALBUM */
+/* REGOLE GENERALI SLIDESHOW PER TUTTE E TRE LE SEZIONI ALBUM */
+.slideshow_container{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+/* ingombro colonne */
+.slideshow_container .album_container{
+    width: calc((100% - (15px *6)) / 6);
+    margin: 0 15px 15px 0;
+    text-align: center;
+}
+/* ingombro testo */
+.slideshow_container .album_container h5{
+    margin: 12px 0 6px 0;
+}
+/* ridimesiono immagine */
+.slideshow_container .album_container .image_container img{
+    width: 100%;
+    transition: all .2s ease;
+}
+/* opacità immagine sull'hover */
+.slideshow_container .album_container .image_container:hover img{
+    opacity: .5;
+}
+/* play button */
+.slideshow_container .album_container .image_container{
+    position: relative;
+}
+.slideshow_container .play{
+    position: absolute;
+    font-size: calc(4em + 1.5vw); /* regolo dimesioni quando stringo il vp */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: all .2s ease;
+}
+/* visibile sull'hover */
+.slideshow_container .album_container .image_container:hover .play{
+    opacity: 1;
+}
+
+/* POPULAR */
+/* immagini tonde */
+.popular .image_container img{
+    border-radius: 50%;
+}
+
+
+/* PLAYER */
+/* regole footer */
+#player{
+    display: flex;
+    justify-content: space-between;
+    height: 85px;
+    background-color: #282828;
+    padding: 0 15px;
+}
+/* SONG */
+/* larghezza minima */
+#player .song{
+    display: flex;
+    flex: 1 0 130px;
+}
+/* parte con img e nome canzone */
+.song .song_up{
+    display: flex;
+    flex: 0 0 80%;
+    justify-content: flex-start;
+    align-items: center;
+}
+/* dimesioni img */
+.song .song_up img{
+    max-height: 50%;
+    max-width: 100%;
+    margin-right: 10px;
+}
+/* parte con icone */
+.song .song_icons{
+    display: flex;
+    justify-content: space-around;
+    flex: 0 0 20%;
+    align-items: center;
+}
+/* hover artista */
+.song .song_text h6 a:hover{
+    text-decoration: underline;
+}
+
+/* TIME */
+#player .time{
+    display: flex;
+    flex: 10 0 71px;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    padding: 10px 0;
+}
+/* ingombro pulsanti */
+.time .buttons{
+    min-width: 40%;
+    margin: auto;
+    text-align: center;
+}
+.time li{
+    display: inline-block;
+    margin: 0 10px;
+    vertical-align: middle;
+}
+.time .buttons .fa-play-circle{
+    font-size: 1.8em;
+    transition: all .2s ease;
+}
+.time .buttons .fa-play-circle:hover{
+    transform: scale(1.2);
+}
+/* ingombro blocco barra tempo */
+.time .time_bar_container{
+    display: flex;
+    min-width: 60%;
+    margin: auto;
+    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+    font-size: .7em;
+}
+/* ingombro barra tempo effettiva */
+.time .time_bar hr{
+    margin: 0 2px;
+    height: 3px;
+    cursor: pointer;
+}
+.time .time_bar{
+    position: relative;
+    width: 90%;
+}
+/* tempo totale */
+.time .time_bar hr:first-of-type{
+    opacity: .4;
+    background-color: #fff;
+}
+/* tempo trascorso */
+.time .time_bar hr:last-of-type{
+    position: absolute;
+    background-color: #fff;
+    opacity: 1;
+    width: 25%;
+    top: 0;
+}
+/* pallino in hover */
+.time .time_bar i{
+    position:absolute;
+    top: -3px;
+    left: 25%;
+    display: none;
+
+}
+/* hover */
+.time .time_bar hr:last-of-type:hover{
+    background-color: lime;
+    border-color: lime;
+}
+.time .time_bar hr:last-of-type:hover + i{
+    display: block;
+}
+
+/* VOLUME */
+#player .volume{
+    flex: 1 0 130px;
+    display: flex;
+    align-items: center;
+}
+/* ingombro lista */
+.volume ul{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+/* elementi lista */
+.volume li{
+    display: inline-block;
+    margin: 0 5px;
+    font-size: .8em;
+    opacity: .9;
+}
+/* barra volume */
+.volume li:last-of-type{
+    width: 100%;
+    position: relative;
+}
+/* regole barra volume */
+.volume li:last-of-type hr{
+    height: 3px;
+    background-color: #fff;
+    border-radius: 3px;
+    cursor: pointer;
+}
+/* volume massimo */
+.volume li:last-of-type hr:first-of-type{
+    opacity: .4;
+}
+/* volume attuale */
+.volume li:last-of-type hr:last-of-type{
+    position: absolute;
+    width: 40%;
+    top: 0;
+}
+/* pallino in hover */
+.volume li:last-of-type i{
+    position:absolute;
+    top: -4px;
+    left: 40%;
+    display: none;
+}
+/* hover */
+.volume li:last-of-type hr:last-of-type:hover{
+    background-color: lime;
+    border-color: lime;
+}
+.volume li:last-of-type hr:last-of-type:hover + i{
+    display: block;
+}
