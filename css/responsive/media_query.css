@@ -1,14 +1,13 @@
-/* breack points */
-/*
-MD (min-width: 640px) and (max-width: 878px)
-SM (min-width: 553px) and (max-width: 639px)
-XS (max-width: 552px)
- */
-
 /* ALBUM SLIDESHOW */
-@media all and (min-width: 640px) and (max-width: 878px){
+@media all and (min-width:879px) and (max-width: 1199px) {
     .slideshow_container .album_container{
         width: calc((100% - (15px *4)) / 4);
+    }
+}
+
+@media all and (min-width: 640px) and (max-width: 878px){
+    .slideshow_container .album_container{
+        width: calc((100% - (15px *2)) / 2);
     }
 }
 
