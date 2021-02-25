@@ -23,6 +23,9 @@ a{
     text-decoration: none;
     color: #fff;
 }
+a:hover {
+    opacity:1;
+}
 h2{
     font-size: 2em;
 }
@@ -66,7 +69,7 @@ rimpiccioliscono e non si ingrandiscono */
 /* playlist albums si prende tutto lo spazio che resta - è libero
 di rimpoccilirsi quando cambia il vh fino a 100px e compare lo scroll */
 #navbar .playlist_albums{
-    flex: 99 1 auto;
+    flex: 1 1 auto;
     min-height: 100px;
     overflow-y: auto;
 }
@@ -179,7 +182,6 @@ di rimpoccilirsi quando cambia il vh fino a 100px e compare lo scroll */
     align-items: center;
     position: sticky;
     top: 0;
-    z-index: 999;
 }
 /* pulsante upgrade */
 #albums_container .upgrade a{
@@ -187,6 +189,11 @@ di rimpoccilirsi quando cambia il vh fino a 100px e compare lo scroll */
     border: 1px solid #fff;
     border-radius: 20px;
     margin-right: 5px;
+    transition: all .2 ease;
+}
+#albums_container .upgrade a:hover{
+    transform: scale(1.1);
+    margin-right: 30px;
 }
 
 /* ALBUMS PARTE PRINCIPALE */
@@ -207,6 +214,9 @@ di rimpoccilirsi quando cambia il vh fino a 100px e compare lo scroll */
 #albums_container .albums nav li > *{
     opacity: .4;
 }
+#albums_container .albums nav li > *:hover{
+    opacity: 1;
+}
 /* bordo più corto per il primo elemento li */
 #albums_container .albums nav li:first-of-type:after {
     content: "";
@@ -217,8 +227,8 @@ di rimpoccilirsi quando cambia il vh fino a 100px e compare lo scroll */
     border-bottom: 2px solid lime;
 }
 
-/* SEZIONI ALBUMS */
-/* RECENTLY PLAYED */
+/* SEIONI ALBUM */
+/* REGOLE GENERALI SLIDESHOW PER TUTTE E TRE LE SEZIONI ALBUM */
 .slideshow_container{
     display: flex;
     flex-wrap: wrap;
@@ -230,6 +240,7 @@ di rimpoccilirsi quando cambia il vh fino a 100px e compare lo scroll */
     margin: 0 15px 15px 0;
     text-align: center;
 }
+/* ingombro testo */
 .slideshow_container .album_container h5{
     margin: 12px 0 6px 0;
 }
@@ -301,11 +312,15 @@ di rimpoccilirsi quando cambia il vh fino a 100px e compare lo scroll */
     flex: 0 0 20%;
     align-items: center;
 }
+/* hover artista */
+.song .song_text h6 a:hover{
+    text-decoration: underline;
+}
 
 /* TIME */
 #player .time{
     display: flex;
-    flex: 1 1 65%;
+    flex: 10 0 71px;
     flex-direction: column;
     justify-content: center;
     height: 100%;
@@ -324,6 +339,10 @@ di rimpoccilirsi quando cambia il vh fino a 100px e compare lo scroll */
 }
 .time .buttons .fa-play-circle{
     font-size: 1.8em;
+    transition: all .2s ease;
+}
+.time .buttons .fa-play-circle:hover{
+    transform: scale(1.2);
 }
 /* ingombro blocco barra tempo */
 .time .time_bar_container{
@@ -336,10 +355,42 @@ di rimpoccilirsi quando cambia il vh fino a 100px e compare lo scroll */
     font-size: .7em;
 }
 /* ingombro barra tempo effettiva */
-.time .time_bar{
-    width: 90%;
+.time .time_bar hr{
     margin: 0 2px;
+    height: 3px;
+    cursor: pointer;
+}
+.time .time_bar{
+    position: relative;
+    width: 90%;
+}
+/* tempo totale */
+.time .time_bar hr:first-of-type{
     opacity: .4;
+    background-color: #fff;
+}
+/* tempo trascorso */
+.time .time_bar hr:last-of-type{
+    position: absolute;
+    background-color: #fff;
+    opacity: 1;
+    width: 25%;
+    top: 0;
+}
+.time .time_bar i{
+    position:absolute;
+    top: -3px;
+    left: 25%;
+    display: none;
+
+}
+/* hover */
+.time .time_bar hr:last-of-type:hover{
+    background-color: lime;
+    border-color: lime;
+}
+.time .time_bar hr:last-of-type:hover + i{
+    display: block;
 }
 
 /* VOLUME */
@@ -364,4 +415,36 @@ di rimpoccilirsi quando cambia il vh fino a 100px e compare lo scroll */
 /* barra volume */
 .volume li:last-of-type{
     width: 100%;
+    position: relative;
+}
+/* regole barra volume */
+.volume li:last-of-type hr{
+    height: 3px;
+    background-color: #fff;
+    border-radius: 3px;
+    cursor: pointer;
+}
+/* volume massimo */
+.volume li:last-of-type hr:first-of-type{
+    opacity: .4;
+}
+/* volume attuale */
+.volume li:last-of-type hr:last-of-type{
+    position: absolute;
+    width: 40%;
+    top: 0;
+}
+.volume li:last-of-type i{
+    position:absolute;
+    top: -4px;
+    left: 40%;
+    display: none;
+}
+/* hover */
+.volume li:last-of-type hr:last-of-type:hover{
+    background-color: lime;
+    border-color: lime;
+}
+.volume li:last-of-type hr:last-of-type:hover + i{
+    display: block;
 }

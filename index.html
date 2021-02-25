@@ -73,33 +73,33 @@
                     </div>
 
                     <div class="playlist_albums">
-                        <ul class="text_opacity">
+                        <ul>
                             <li>
-                                <a href="#">Nome Playlist</a>
+                                <a class="text_opacity" href="#">Nome Playlist</a>
                             </li>
 
                             <li>
-                                <a href="#">Nome Playlist</a>
+                                <a class="text_opacity" href="#">Nome Playlist</a>
                             </li>
 
                             <li>
-                                <a href="#">Nome Playlist</a>
+                                <a class="text_opacity" href="#">Nome Playlist</a>
                             </li>
 
                             <li>
-                                <a href="#">Nome Playlist</a>
+                                <a class="text_opacity" href="#">Nome Playlist</a>
                             </li>
 
                             <li>
-                                <a href="#">Nome Playlist</a>
+                                <a class="text_opacity" href="#">Nome Playlist</a>
                             </li>
 
                             <li>
-                                <a href="#">Nome Playlist</a>
+                                <a class="text_opacity" href="#">Nome Playlist</a>
                             </li>
 
                             <li>
-                                <a href="#">Nome Playlist</a>
+                                <a class="text_opacity" href="#">Nome Playlist</a>
                             </li>
                         </ul>
                     </div>
@@ -321,15 +321,15 @@
                 <div class="song_up">
                     <img src="img/player_left.jpg" alt="">
                     <div class="song_text">
-                        <h5>Song Artist</h5>
-                        <h6 class="text_opacity">Song Name</h6>
+                        <h5><a href="#">Song Name</a></h5>
+                        <h6><a class="text_opacity" href="#">Song Artist</a></h6>
                     </div>
                 </div>
-                <div class="song_icons text_opacity">
-                    <a href="#">
+                <div class="song_icons">
+                    <a class="text_opacity" href="#">
                         <i class="far fa-folder"></i>
                     </a>
-                    <a href="#">
+                    <a class="text_opacity" href="#">
                         <i class="far fa-heart"></i>
                     </a>
                 </div>
@@ -371,7 +371,12 @@
                     <div class="time_number">
                         0:25
                     </div>
-                    <hr class="time_bar">
+                    <div class="time_bar">
+                        <!-- tempo totale -->
+                        <hr>
+                        <!-- tempo trascorso -->
+                        <hr><i class="fas fa-circle"></i>
+                    </div>
                     <div class="time_number">
                         4:35
                     </div>
@@ -399,7 +404,10 @@
                     </li>
 
                     <li>
-                        <hr class="volume_bar">
+                        <!-- volume massimo -->
+                        <hr>
+                        <!-- volume attuale -->
+                        <hr><i class="fas fa-circle"></i>
                     </li>
                 </ul>
             </div>
