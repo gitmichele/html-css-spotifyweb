@@ -417,27 +417,6 @@ di rimpoccilirsi quando cambia il vh fino a 100px e compare lo scroll */
     right: -2px;
     display: none;
 }
-@keyframes left-right-dot {
-    0{
-        left: 0;
-    }
-
-    25%{
-        left: 25%;
-    }
-
-    50% {
-        left: 50%;
-    }
-
-    75% {
-        left: 75%;
-    }
-
-    100%{
-        left: 100;
-    }
-}
 /* hover */
 .time .animation_bar:hover{
     border-color: lime;
