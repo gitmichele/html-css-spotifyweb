@@ -108,3 +108,15 @@
         justify-content: center;
     }
 }
+
+/* UPGRADE */
+/* tolgo barra upgrade quando stringo troppo il vh */
+@media all and (max-height: 548px) {
+    #albums_container .upgrade{
+        display: none;
+    }
+
+    #albums_container{
+        padding-top: 100px;
+    }
+}
