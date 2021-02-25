@@ -183,6 +183,7 @@ di rimpoccilirsi quando cambia il vh fino a 100px e compare lo scroll */
     position: sticky;
     top: 0;
     z-index: 999;
+    font-size: calc(.7em + .3vw);
 }
 /* pulsante upgrade */
 #albums_container .upgrade a{
