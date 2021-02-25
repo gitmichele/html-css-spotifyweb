@@ -191,7 +191,7 @@ di rimpoccilirsi quando cambia il vh fino a 100px e compare lo scroll */
     border: 1px solid #fff;
     border-radius: 20px;
     margin-right: 5px;
-    transition: all .2 ease;
+    transition: all .2s ease;
 }
 #albums_container .upgrade a:hover{
     transform: scale(1.1);
