@@ -362,38 +362,42 @@ di rimpoccilirsi quando cambia il vh fino a 100px e compare lo scroll */
     margin: 0 2px;
     height: 3px;
     cursor: pointer;
+    opacity: .4;
+    width:100%;
+    position: absolute;
+    background-color: #fff;
 }
 .time .time_bar{
     position: relative;
     width: 90%;
 }
-/* tempo totale */
-.time .time_bar hr:first-of-type{
-    opacity: .4;
-    background-color: #fff;
-}
 /* tempo trascorso */
-.time .time_bar hr:last-of-type{
-    position: absolute;
-    background-color: #fff;
+.time .time_bar .hover_bar{
+    position: relative;
+    border: 1px solid #fff;
     opacity: 1;
     width: 25%;
-    top: 0;
+    top: 1px;
+    cursor: pointer;
 }
 /* pallino in hover */
-.time .time_bar i{
+.time .hover_bar i{
     position:absolute;
-    top: -3px;
-    left: 25%;
+    top: -4px;
+    right: -2px;
     display: none;
-
 }
 /* hover */
-.time .time_bar hr:last-of-type:hover{
-    background-color: lime;
+.time .hover_bar:hover{
     border-color: lime;
 }
-.time .time_bar hr:last-of-type:hover + i{
+.time .hover_bar:hover  i{
+    display: block;
+}
+.time .time_bar hr:hover + .hover_bar{
+    border-color: lime;
+}
+.time .time_bar hr:hover + .hover_bar i{
     display: block;
 }
 
@@ -420,36 +424,42 @@ di rimpoccilirsi quando cambia il vh fino a 100px e compare lo scroll */
 .volume li:last-of-type{
     width: 100%;
     position: relative;
+    display: flex;
+    align-items: center;
 }
-/* regole barra volume */
+
 .volume li:last-of-type hr{
     height: 3px;
+    cursor: pointer;
+    opacity: .4;
+    width:100%;
+    position: absolute;
     background-color: #fff;
-    border-radius: 3px;
+}
+.volume li:last-of-type .hover_bar{
+    position: relative;
+    border: 1px solid #fff;
+    opacity: 1;
+    width: 25%;
+    top: 0;
     cursor: pointer;
 }
-/* volume massimo */
-.volume li:last-of-type hr:first-of-type{
-    opacity: .4;
-}
-/* volume attuale */
-.volume li:last-of-type hr:last-of-type{
-    position: absolute;
-    width: 40%;
-    top: 0;
-}
-/* pallino in hover */
-.volume li:last-of-type i{
+.volume li:last-of-type .hover_bar i{
     position:absolute;
-    top: -4px;
-    left: 40%;
+    top: -6px;
+    right: -2px;
     display: none;
 }
 /* hover */
-.volume li:last-of-type hr:last-of-type:hover{
-    background-color: lime;
+.volume li:last-of-type .hover_bar:hover{
     border-color: lime;
 }
-.volume li:last-of-type hr:last-of-type:hover + i{
+.volume li:last-of-type .hover_bar:hover  i{
+    display: block;
+}
+.volume li:last-of-type hr:hover + .hover_bar{
+    border-color: lime;
+}
+.volume li:last-of-type hr:hover + .hover_bar i{
     display: block;
 }
