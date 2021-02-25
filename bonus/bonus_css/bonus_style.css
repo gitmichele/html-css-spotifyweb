@@ -370,32 +370,86 @@ di rimpoccilirsi quando cambia il vh fino a 100px e compare lo scroll */
     width: 90%;
 }
 /* tempo totale */
-.time .time_bar hr:first-of-type{
+.time .time_bar hr{
     opacity: .4;
+    width:100%;
+    position: absolute;
     background-color: #fff;
 }
 /* tempo trascorso */
-.time .time_bar hr:last-of-type{
-    position: absolute;
-    background-color: #fff;
+.time .time_bar .animation_bar{
+    position: relative;
+    border: 1px solid #fff;
     opacity: 1;
-    width: 25%;
-    top: 0;
+    width: 0;
+    top: 1px;
+    cursor: pointer;
+    animation-name: left-right-bar;
+    animation-duration: 141s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+}
+@keyframes left-right-bar {
+    0{
+        width: 0;
+    }
+
+    25%{
+        width: 25%;
+    }
+
+    50% {
+        width: 50%;
+    }
+
+    75% {
+        width: 75%;
+    }
+
+    100%{
+        width: 100;
+    }
 }
 /* pallino in hover */
-.time .time_bar i{
+.time .animation_bar i{
     position:absolute;
-    top: -3px;
-    left: 25%;
+    top: -4px;
+    right: -2px;
     display: none;
+}
+@keyframes left-right-dot {
+    0{
+        left: 0;
+    }
 
+    25%{
+        left: 25%;
+    }
+
+    50% {
+        left: 50%;
+    }
+
+    75% {
+        left: 75%;
+    }
+
+    100%{
+        left: 100;
+    }
 }
 /* hover */
-.time .time_bar hr:last-of-type:hover{
-    background-color: lime;
+.time .animation_bar:hover{
     border-color: lime;
 }
-.time .time_bar hr:last-of-type:hover + i{
+.time .animation_bar:hover  i{
+    display: block;
+}
+.time .time_bar hr:hover + .animation_bar{
+    border-color: lime;
+}
+
+.time .time_bar hr:hover + .animation_bar i{
     display: block;
 }
 
