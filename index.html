@@ -174,7 +174,7 @@
                         <!-- ASCOLTATI DI RECENTE -->
                         <div class="recently_played">
                             <!-- titolo -->
-                            <h2>Recently played</h2>
+                            <h2 id="mainTitle">Recently played</h2>
 
                             <!-- copertine -->
                             <div class="slideshow_container">
@@ -439,6 +439,12 @@
             </div>
         </section>
 
+        <!-- .JS -->
+        <script>
+            document.getElementById('mainTitle').innerHTML = 'Cambio questo titolo'
+            alert('Look mom I can make alert boxes!')
+
+        </script>
 
     </body>
 </html>
